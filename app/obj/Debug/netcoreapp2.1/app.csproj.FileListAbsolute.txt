@@ -1,0 +1,14 @@
+/Users/afreeland/Documents/GitHub/p8_tech/app/obj/Debug/netcoreapp2.1/app.csprojAssemblyReference.cache
+/Users/afreeland/Documents/GitHub/p8_tech/app/obj/Debug/netcoreapp2.1/app.csproj.CoreCompileInputs.cache
+/Users/afreeland/Documents/GitHub/p8_tech/app/obj/Debug/netcoreapp2.1/app.AssemblyInfoInputs.cache
+/Users/afreeland/Documents/GitHub/p8_tech/app/obj/Debug/netcoreapp2.1/app.AssemblyInfo.cs
+/Users/afreeland/Documents/GitHub/p8_tech/app/bin/Debug/netcoreapp2.1/app.deps.json
+/Users/afreeland/Documents/GitHub/p8_tech/app/bin/Debug/netcoreapp2.1/app.runtimeconfig.json
+/Users/afreeland/Documents/GitHub/p8_tech/app/bin/Debug/netcoreapp2.1/app.runtimeconfig.dev.json
+/Users/afreeland/Documents/GitHub/p8_tech/app/bin/Debug/netcoreapp2.1/app.dll
+/Users/afreeland/Documents/GitHub/p8_tech/app/bin/Debug/netcoreapp2.1/app.pdb
+/Users/afreeland/Documents/GitHub/p8_tech/app/bin/Debug/netcoreapp2.1/library.dll
+/Users/afreeland/Documents/GitHub/p8_tech/app/bin/Debug/netcoreapp2.1/library.pdb
+/Users/afreeland/Documents/GitHub/p8_tech/app/obj/Debug/netcoreapp2.1/app.csproj.CopyComplete
+/Users/afreeland/Documents/GitHub/p8_tech/app/obj/Debug/netcoreapp2.1/app.dll
+/Users/afreeland/Documents/GitHub/p8_tech/app/obj/Debug/netcoreapp2.1/app.pdb

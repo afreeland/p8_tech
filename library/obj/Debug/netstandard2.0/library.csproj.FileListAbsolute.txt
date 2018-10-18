@@ -1,0 +1,9 @@
+/Users/afreeland/Documents/GitHub/p8_tech/library/bin/Debug/netstandard2.0/library.deps.json
+/Users/afreeland/Documents/GitHub/p8_tech/library/bin/Debug/netstandard2.0/library.dll
+/Users/afreeland/Documents/GitHub/p8_tech/library/bin/Debug/netstandard2.0/library.pdb
+/Users/afreeland/Documents/GitHub/p8_tech/library/obj/Debug/netstandard2.0/library.csprojAssemblyReference.cache
+/Users/afreeland/Documents/GitHub/p8_tech/library/obj/Debug/netstandard2.0/library.csproj.CoreCompileInputs.cache
+/Users/afreeland/Documents/GitHub/p8_tech/library/obj/Debug/netstandard2.0/library.AssemblyInfoInputs.cache
+/Users/afreeland/Documents/GitHub/p8_tech/library/obj/Debug/netstandard2.0/library.AssemblyInfo.cs
+/Users/afreeland/Documents/GitHub/p8_tech/library/obj/Debug/netstandard2.0/library.dll
+/Users/afreeland/Documents/GitHub/p8_tech/library/obj/Debug/netstandard2.0/library.pdb
