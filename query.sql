@@ -1,12 +1,18 @@
 -- We need to grab the lowest DiagnosisID for each Member's Category
-with MostSevereDiagnosis (MemberID, SevereDiagnosisID) as (
+with MostSevereDiagnosis (MemberID, SevereDiagnosisID, diagCategoryID) as (
     select 
         md.MemberID
-        ,min(md.DiagnosisID) 
+        ,min(md.DiagnosisID) as 'SevereDiagnosisID'
+        , dc.DiagnosisCategoryID
     from
         MemberDiagnosis md
+    left join DiagnosisCategoryMap dcm
+        on md.DiagnosisID = dcm.DiagnosisID
+    left join DiagnosisCategory dc
+        on dcm.DiagnosisCategoryID = dc.DiagnosisCategoryID
     group by
         md.MemberID
+        , dc.DiagnosisCategoryID
 ),
 
 -- We want to get the lowest CategoryID for each member and Category Score is not a factor
@@ -21,10 +27,10 @@ MostSevereCategory (MemberID, SevereCategoryID) as (
     left join DiagnosisCategory dc
         on dcm.DiagnosisCategoryID = dc.DiagnosisCategoryID
     group by
-        md.MemberID
+        md.MemberID, dc.DiagnosisCategoryID
 )
 
-select 
+select distinct
     m.MemberID as 'Member ID'
     ,m.FirstName as 'First Name'
     ,m.LastName as 'Last Name'
@@ -33,14 +39,21 @@ select
     ,msc.SevereCategoryID as 'Category ID'
     ,dc.CategoryDescription as 'Category Description'
     ,dc.CategoryScore as 'Category Score'
-    -- We need to null coalesce Severe CategoryIDs that do not exist with 1
-    ,coalesce(msc.SevereCategoryID, 1) as 'Is Most Severe Category'
+    -- We need verify if our current rows category id is indeed the lowest for 
+    , case when msc.SevereCategoryID = (select min(SevereCategoryID) from MostSevereCategory dmap where MemberID = m.MemberID) 
+            then 
+                1 
+            else 
+                case when msc.SevereCategoryID is null then 1 else 0 end
+        end as 'Is Most Severe Category'
+         
+        
 from Member m
 left join MostSevereDiagnosis msd
     on m.MemberID = msd.MemberID
 left join Diagnosis d
     on msd.SevereDiagnosisID = d.DiagnosisID
 left join MostSevereCategory msc
-    on m.MemberID = msc.MemberID
+    on msd.diagCategoryID = msc.SevereCategoryID
 left join DiagnosisCategory dc
     on msc.SevereCategoryID = dc.DiagnosisCategoryID
